@@ -275,3 +275,47 @@ footer p { text-shadow: 2px 2px 0 #000; }
   .nav { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
   .nav a { padding: 10px; height: 40px; }
 }
+/* ==========================================================================
+   高级多语言切换按钮及导航栏兼容性适配
+   ========================================================================== */
+.lang-switch-btn {
+  background: transparent;
+  border: 2px solid var(--border);
+  color: var(--text-sub) !important;
+  padding: 5px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: inset -2px -2px 0px #000;
+}
+
+.lang-switch-btn:hover {
+  background-color: var(--mc-green);
+  border-color: var(--mc-green-hover);
+  color: #FFFFFF !important;
+  box-shadow: inset -2px -2px 0px rgba(0,0,0,0.4);
+}
+
+.lang-switch-btn:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* 缩减导航项间距，完美承载英文长单词排版 */
+.nav a {
+  padding: 0 12px !important;
+  letter-spacing: 0.5px !important;
+}
+
+@media (max-width: 900px) {
+  .lang-switch-btn {
+    margin-left: 0;
+    margin-top: 5px;
+    width: 100%;
+    padding: 8px;
+  }
+}
